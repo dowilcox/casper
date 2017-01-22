@@ -10,11 +10,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	    <a class="subscribe icon-feed" href="<?php bloginfo('rss2_url'); ?>"><span class="tooltip"><?php _e('Subscribe!', 'casper'); ?></span></a>
 		<div class="site-info inner">
-		    <section class="copyright">
-		    	<?php if(  false == get_theme_mod( 'casper_custom_footer') ) { ?>
-		    		<?php printf( __( '<a href="%1$s" rel="home">Casper WP</a> by Lacy Morrow', 'casper' ), esc_url( 'https://github.com/lacymorrow/casper' ) ); ?>
-		    	<?php } else { echo get_theme_mod( 'casper_custom_footer'); } ?>
-		    </section>
+		    <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </main><!-- /#content -->
