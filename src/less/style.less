@@ -1,7 +1,6 @@
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
-
 /*
 
     0.  Includes
@@ -17,29 +16,20 @@
     10. Media Queries (Mobile)
 
 */
-
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
-
 // @import url(css/normalize.css);
 @import (less) "normalize.css";
-
-
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
-
 /* Import the font file with the icons in it */
 // @import url(css/fa.css);
 @import (less) "fa.css";
-
-
-
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
-
 html {
     height: 100%;
     max-height: 100%;
@@ -68,8 +58,12 @@ body {
     text-shadow: none;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
@@ -109,23 +103,32 @@ h6 {
 a {
     color: #4a4a4a;
     transition: color ease 0.3s;
+
     &:hover {
         color: #57A3E8;
     }
 }
 
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
     color: #50585D;
 }
 
-
-p, ul, ol, dl {
+dl,
+ol,
+p,
+ul {
     margin: 1.6em 0;
 }
 
-ol ol, ul ul,
-ul ol, ol ul {
+ol ol,
+ol ul,
+ul ol,
+ul ul {
     margin: 0.4em 0;
 }
 
@@ -138,12 +141,12 @@ dl dt {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 dl dd {
     margin-left: 200px;
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 hr {
@@ -161,20 +164,29 @@ blockquote {
     margin: 1.6em 0 1.6em -2.2em;
     padding: 0 0 0 1.6em;
     border-left: #4a4a4a 0.4em solid;
+
     p {
         margin: 0.8em 0;
         font-style: italic;
     }
+
     small {
         display: inline-block;
         margin: 0.8em 0 0.8em 1.5em;
-        font-size:0.9em;
+        font-size: 0.9em;
         color: #ccc;
-        &:before { content: '\2014 \00A0'; }
+
+        &:before {
+            content: '\2014 \00A0';
+        }
     }
+
     cite {
-        font-weight:bold;
-        a { font-weight: normal; }
+        font-weight: bold;
+
+        a {
+            font-weight: normal;
+        }
     }
 }
 
@@ -182,7 +194,8 @@ mark {
     background-color: #ffc336;
 }
 
-code, tt {
+code,
+tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
@@ -207,7 +220,8 @@ pre {
     border-radius: 3px;
 }
 
-pre code, tt {
+pre code,
+tt {
     font-size: inherit;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
@@ -227,22 +241,20 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 0 0 #fff inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    width:100%;
+    width: 100%;
     max-width: 100%;
     background-color: transparent;
 }
 
-table th,
-table td {
+table td,
+table th {
     padding: 8px;
     line-height: 20px;
     text-align: left;
@@ -250,20 +262,26 @@ table td {
     border-top: 1px solid #efefef;
 }
 
-table th { color: #000; }
+table th {
+    color: #000;
+}
 
-table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
+table caption + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
+table colgroup + thead tr:first-child th,
+table thead:first-child tr:first-child td,
+table thead:first-child tr:first-child th {
     border-top: 0;
 }
 
-table tbody + tbody { border-top: 2px solid #efefef; }
+table tbody + tbody {
+    border-top: 2px solid #efefef;
+}
 
-table table table { background-color: #fff; }
+table table table {
+    background-color: #fff;
+}
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
@@ -272,32 +290,28 @@ table tbody > tr:nth-child(odd) > th {
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
+    background: transparent;
 }
 
-iframe, .fluid-width-video-wrapper {
+.fluid-width-video-wrapper,
+iframe {
     display: block;
     margin: 1.6em 0;
 }
-
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe {
     margin: 0;
 }
-
-
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
-
 /* Hides shit */
 .hidden {
     text-indent: -9999px;
     visibility: hidden;
     display: none;
 }
-
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
     position: relative;
@@ -306,7 +320,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 auto;
     padding-bottom: 1em;
 }
-
 /* Centres vertically yo. (IE8+) */
 .vertical-row {
     display: table-row;
@@ -325,20 +338,22 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .wrapword {
-    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    white-space: pre-wrap;       /* css-3 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -moz-pre-wrap !important;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    white-space: pre-wrap;
+    /* css-3 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
     word-break: break-all;
     white-space: normal;
 }
-
-
 /* ==========================================================================
    WP styles
    ========================================================================== */
-
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -348,41 +363,53 @@ hr {
     height: 1px;
     margin-bottom: 1.5em;
 }
-ul, ol {
+
+ol,
+ul {
     margin: 0 0 1.5em 3em;
 }
+
 ul {
     list-style: disc;
 }
+
 ol {
     list-style: decimal;
 }
-li > ul,
-li > ol {
+
+li > ol,
+li > ul {
     margin-bottom: 0;
     margin-left: 1.5em;
 }
+
 dt {
     font-weight: bold;
 }
+
 dd {
     margin: 0 1.5em 1.5em;
 }
+
 img {
-    height: auto; /* Make sure images are scaled correctly. */
-    max-width: 100%; /* Adhere to container width. */
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
 }
+
 figure {
     margin: 0;
 }
+
 table {
     margin: 0 0 1.5em;
     width: 100%;
 }
+
 th {
     font-weight: bold;
 }
-
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
@@ -390,11 +417,16 @@ button,
 input,
 select,
 textarea {
-    font-size: 100%; /* Corrects font size not being inherited in all browsers */
-    margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-    vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-    *vertical-align: middle; /* Improves appearance and consistency in IE6/IE7 */
+    font-size: 100%;
+    /* Corrects font size not being inherited in all browsers */
+    margin: 0;
+    /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+    vertical-align: baseline;
+    /* Improves appearance and consistency in all browsers */
+    *vertical-align: middle;
+    /* Improves appearance and consistency in IE6/IE7 */
 }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -405,14 +437,17 @@ input[type="submit"] {
     background: #e6e6e6;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
     color: rgba(0, 0, 0, .8);
-    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    cursor: pointer;
+    /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button;
+    /* Corrects inability to style clickable 'input' types in iOS */
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1;
-    padding: .6em 1em .4em;
+    padding: 0.6em 1em 0.4em;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
+
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -420,67 +455,82 @@ input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa #bbb;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
+
 button:active,
+button:focus,
 input[type="button"]:active,
+input[type="button"]:focus,
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb #bbb;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
+
 input[type="checkbox"],
 input[type="radio"] {
-    padding: 0; /* Addresses excess padding in IE8/9 */
+    padding: 0;
+    /* Addresses excess padding in IE8/9 */
 }
+
 input[type="search"] {
-    -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-    -webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-    -moz-box-sizing:    content-box;
-    box-sizing:         content-box;
+    -webkit-appearance: textfield;
+    /* Addresses appearance set to searchfield in S5, Chrome */
+    -webkit-box-sizing: content-box;
+    /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+
+input[type="search"]::-webkit-search-decoration {
+    /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
     -webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+input::-moz-focus-inner {
+    /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
     border: 0;
     padding: 0;
 }
-input[type="text"],
+
 input[type="email"],
-input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="text"],
+input[type="url"],
 textarea {
     color: #666;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-input[type="text"]:focus,
+
 input[type="email"]:focus,
-input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
 textarea:focus {
     color: #111;
 }
-input[type="text"],
+
 input[type="email"],
-input[type="url"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+input[type="text"],
+input[type="url"] {
     padding: 3px;
 }
+
 textarea {
-    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    overflow: auto;
+    /* Removes default vertical scrollbar in IE6/7/8/9 */
     padding-left: 3px;
-    vertical-align: top; /* Improves readability and alignment in all browsers */
+    vertical-align: top;
+    /* Improves readability and alignment in all browsers */
     width: 98%;
 }
-
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -493,12 +543,14 @@ textarea {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
 }
-.main-navigation>div {
+
+.main-navigation > div {
     width: 80%;
     max-width: 700px;
     margin: 0 auto;
     padding: 0;
 }
+
 .main-navigation ul {
     list-style: none;
     margin: 0 4rem;
@@ -506,24 +558,28 @@ textarea {
     float: right;
     font-size: 1.2rem;
 }
+
 .main-navigation li {
     float: left;
     position: relative;
 }
+
 .main-navigation a {
     display: block;
     text-decoration: none;
     color: white;
     padding: 12px 20px;
     background-color: rgba(0,0,0,0);
-    -webkit-transition:  color 0.3s ease, background 0.3s ease;
-    -moz-transition:  color 0.3s ease, background 0.3s ease;
-    transition:  color 0.3s ease, background 0.3s ease;
+    -webkit-transition: color 0.3s ease, background 0.3s ease;
+    -moz-transition: color 0.3s ease, background 0.3s ease;
+    transition: color 0.3s ease, background 0.3s ease;
 }
+
 .main-navigation a:hover {
     background-color: rgba(0,0,0,0.4);
     color: white;
 }
+
 .main-navigation ul ul {
     display: none;
     left: 0;
@@ -533,16 +589,18 @@ textarea {
     margin: 0;
     width: 100%;
 }
+
 .main-navigation ul ul ul {
     left: 100%;
     top: 0;
 }
+
 .main-navigation ul li:hover > ul {
     display: block;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
-}
+
+.main-navigation .current-menu-item a,
+.main-navigation .current_page_item a {}
 /* Small menu */
 .menu-toggle {
     cursor: pointer;
@@ -557,15 +615,17 @@ textarea {
     width: 48px;
     display: none;
 }
+
 .menu-toggle a {
     padding: 5px;
 }
+
 .menu-toggle a:before {
     font-size: 3rem;
 }
 @media screen and (max-width: 600px) {
-    .menu-toggle,
-    .main-navigation.toggled .nav-menu {
+    .main-navigation.toggled .nav-menu,
+    .menu-toggle {
         display: block;
     }
 
@@ -575,6 +635,7 @@ textarea {
         font-size: 1.8rem;
         background-color: rgba(0,0,0,0.4);
     }
+
     .main-navigation li {
         float: none;
         margin: 0 auto;
@@ -582,18 +643,21 @@ textarea {
         border-bottom: 1px solid #444;
     }
 }
+
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
 }
+
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
     float: left;
     width: 50%;
 }
+
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
@@ -601,7 +665,6 @@ textarea {
     text-align: right;
     width: 50%;
 }
-
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -611,9 +674,9 @@ textarea {
     position: absolute !important;
 }
 
-.screen-reader-text:hover,
 .screen-reader-text:active,
-.screen-reader-text:focus {
+.screen-reader-text:focus,
+.screen-reader-text:hover {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -629,9 +692,9 @@ textarea {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000; /* Above WP toolbar */
+    z-index: 100000;
+    /* Above WP toolbar */
 }
-
 /*--------------------------------------------------------------
 7.0 Alignments
 --------------------------------------------------------------*/
@@ -640,68 +703,65 @@ textarea {
     float: left;
     margin-right: 1.5em;
 }
+
 .alignright {
     display: inline;
     float: right;
     margin-left: 1.5em;
 }
+
 .aligncenter {
     clear: both;
     display: block;
     margin: 0 auto;
 }
-
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
-.clear:before,
 .clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
+.clear:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
+.comment-content:before,
+.entry-content:after,
+.entry-content:before,
 .site-content:after,
+.site-content:before,
+.site-footer:after,
 .site-footer:before,
-.site-footer:after {
+.site-header:after,
+.site-header:before {
     content: '';
     display: table;
 }
 
 .clear:after,
-.entry-content:after,
 .comment-content:after,
-.site-header:after,
+.entry-content:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.site-header:after {
     clear: both;
 }
-
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
     margin: 0 0 1.5em;
 }
-
 /* Make sure select elements fit in widgets */
 .widget select {
     max-width: 100%;
 }
-
 /* Search widget */
 .widget_search .search-submit {
     display: none;
 }
-
 /* Main widget wrapper */
 .widget-area {
     * {
         box-sizing: border-box;
     }
-    width:80%;
+    width: 80%;
     max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
@@ -733,10 +793,10 @@ textarea {
     transition: border ease 0.3s;
 }
 
-.search-submit:hover, .form-submit #submit:hover {
+.form-submit #submit:hover,
+.search-submit:hover {
     border-color: #9EABB3;
 }
-
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -746,56 +806,62 @@ textarea {
 .sticky {
     content: "";
 }
+
 .hentry {
     margin: 0 0 1.5em;
 }
+
 .byline,
 .updated {
     display: none;
 }
-.single .byline,
-.group-blog .byline {
+
+.group-blog .byline,
+.single .byline {
     display: inline;
 }
-.page-content,
+
 .entry-content,
-.entry-summary {
+.entry-summary,
+.page-content {
     margin: 1.5em 0 0;
 }
+
 .page-links {
     clear: both;
     margin: 0 0 1.5em;
 }
+
 .post-image:after {
     content: ' ';
     display: block;
     clear: both;
 }
-
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
+.archive .format-aside .entry-title,
+.blog .format-aside .entry-title {
     display: none;
 }
-
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
 .comment-content a {
     word-wrap: break-word;
 }
+
 .bypostauthor {
     content: '';
 }
-
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+.infinite-scroll .paging-navigation,
+/* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
     display: none;
 }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
@@ -808,49 +874,52 @@ textarea {
     margin-bottom: 1.5em;
     max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
     display: block;
     margin: 1.2% auto 0;
     max-width: 98%;
 }
+
 .wp-caption-text {
     text-align: center;
 }
+
 .wp-caption .wp-caption-text {
     margin: 0.8075em 0;
 }
+
 .site-main .gallery {
     margin-bottom: 1.5em;
 }
+
 .gallery-caption {
     content: '';
 }
+
 .site-main .gallery a img {
     border: none;
     height: auto;
     max-width: 90%;
 }
+
 .site-main .gallery dd,
 .site-main .gallery figcaption {
     margin: 0;
 }
-.site-main .gallery-columns-4 .gallery-item {
-}
-.site-main .gallery-columns-4 .gallery-item img {
-}
+
+.site-main .gallery-columns-4 .gallery-item {}
+
+.site-main .gallery-columns-4 .gallery-item img {}
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
     max-width: 100%;
 }
-
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-
-
-
 /* Big cover image on the home page */
 .site-head {
     position: relative;
@@ -881,15 +950,16 @@ object {
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
 }
+
 body.home .site-head:after {
     z-index: -3;
 }
-
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo {
     text-decoration: none;
     color: white;
 }
+
 .blog-logo img {
     display: block;
     max-height: 120px;
@@ -897,10 +967,9 @@ body.home .site-head:after {
     margin: 0 auto;
     line-height: 0;
 }
-
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: bold;
@@ -917,17 +986,15 @@ body.home .site-head:after {
     letter-spacing: 0;
     text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
-
 /* Every post, on every page, gets this style on its <article> tag */
 .post-wrap {
     position: relative;
-    width:80%;
+    width: 80%;
     max-width: 700px;
     margin: 4rem auto;
     word-break: break-word;
     hyphens: auto;
 }
-
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .circle-in-border {
@@ -955,20 +1022,18 @@ body.home .site-head:after {
     }
 }
 
-.hentry{
+.hentry {
     .post-wrap();
     border-bottom: #EBF2F6 1px solid;
 }
-
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-
 .hentry:after {
     .circle-in-border();
 }
 
 .post-title {
-    margin:0;
+    margin: 0;
 }
 
 .post-title a {
@@ -976,14 +1041,14 @@ body.home .site-head:after {
 }
 
 .post-excerpt p {
-    margin: 1.6rem 0 0 0;
+    margin: 1.6rem 0 0;
     font-size: 0.9em;
     line-height: 1.6em;
 }
 
 .post-meta {
     display: inline-block;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     color: #9EABB3;
@@ -1026,7 +1091,7 @@ body.home .site-head:after {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 4.3rem 0 4rem 0;
+    padding: 4.3rem 0 4rem;
     text-align: right;
 }
 
@@ -1040,23 +1105,19 @@ body.home .site-head:after {
     font-size: 1.4rem;
     line-height: 1.5em;
 }
-
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
-
 /* Tweak the .post wrapper style */
 .post-template .post {
     margin-top: 0;
     border-bottom: none;
     padding-bottom: 0;
 }
-
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
     display: none;
 }
-
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
     padding: 60px 0;
@@ -1069,7 +1130,7 @@ body.home .site-head:after {
     max-width: 100%;
     margin: 0 auto;
     height: auto;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -ms-filter:  "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
     transition: opacity ease 0.6s;
@@ -1079,7 +1140,6 @@ body.home .site-head:after {
     display: inline-block;
     padding: 2.5rem 0;
 }
-
 /* Keep large images within the bounds of the post-width */
 .post-content {
     img {
@@ -1088,21 +1148,22 @@ body.home .site-head:after {
         margin: 0 auto;
         height: auto;
         padding: 1em;
+
         &.wp-smiley {
             display: inline;
             padding: 0;
         }
     }
+
     .wp-caption img {
         padding: 0;
     }
 }
-
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
+    margin: 4rem 0 0;
+    padding: 4rem 0 0;
     border-top: #EBF2F6 1px solid;
 }
 
@@ -1116,17 +1177,14 @@ body.home .site-head:after {
     font-size: 1.4rem;
     line-height: 1.6em;
 }
-
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin: 0 1rem 3rem 1rem;
+    margin: 0 1rem 3rem;
 }
 
-.post-footer .author a{
+.post-footer .author a {
     text-decoration: none;
 }
-
-
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
@@ -1158,15 +1216,14 @@ body.home .site-head:after {
     margin-right: 1em;
     display: block;
 }
-
 /* ==========================================================================
    5.1 Comments
    ========================================================================== */
-.comment-list,
-.children {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
+.children,
+.comment-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .comment,
@@ -1199,8 +1256,10 @@ body.home .site-head:after {
     line-height: 1;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
     color: #9EABB3;
-    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    cursor: pointer;
+    /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button;
+    /* Corrects inability to style clickable 'input' types in iOS */
 }
 
 .reply a:hover {
@@ -1215,13 +1274,10 @@ body.home .site-head:after {
 .comment-form {
     overflow: hidden;
 }
-
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
    ========================================================================== */
-
 /* Github */
-
 .gist table {
     margin: 0;
     font-size: 1.4rem;
@@ -1231,35 +1287,37 @@ body.home .site-head:after {
     min-width: 25px;
     font-size: 1.1rem;
 }
-
 /* Social links */
 .social-icons {
     margin-top: 15px;
 }
+
 .social-icons a {
     text-decoration: none;
     font-size: 1.3em;
     margin: 0 5px;
     color: white;
 }
-.blog-title a:hover, .social-icons a:hover {
+
+.blog-title a:hover,
+.social-icons a:hover {
     color: #57A3E8;
 }
 /* Comments */
 .comments-area {
-    width:80%;
+    width: 80%;
     max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
 }
 
-.comment-form-comment label{
+.comment-form-comment label {
     width: 100%;
     display: inline-block;
 }
 
 .form-allowed-tags {
-    width:60%;
+    width: 60%;
     float: right;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
@@ -1272,7 +1330,7 @@ body.home .site-head:after {
     margin-top: 1rem;
 }
 
-.form-submit #submit{
+.form-submit #submit {
     .wrapword;
     float: left;
     max-width: 35%;
@@ -1297,6 +1355,7 @@ body.home .site-head:after {
     font-family: 'Open Sans', sans-serif;
     color: #9EABB3;
     text-align: center;
+
     & > h1 {
         font-size: 1.3rem;
         font-weight: normal;
@@ -1310,7 +1369,6 @@ body.home .site-head:after {
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
    ========================================================================== */
-
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
@@ -1321,13 +1379,14 @@ body.home .site-head:after {
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
+
     a {
         color: #9EABB3;
     }
 }
 /* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
+.newer-posts,
+.older-posts {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
@@ -1335,6 +1394,7 @@ body.home .site-head:after {
     text-decoration: none;
     border-radius: 30px;
     transition: border ease 0.3s;
+
     &:hover {
         border-color: #9EABB3;
     }
@@ -1352,12 +1412,9 @@ body.home .site-head:after {
 .newer-posts {
     left: 0;
 }
-
-
 /* ==========================================================================
    8. Footer - The bottom of every page
    ========================================================================== */
-
 .site-footer {
     position: relative;
     margin: 0;
@@ -1369,6 +1426,24 @@ body.home .site-head:after {
     color: #BBC7CC;
     text-align: center;
     background: #F7FAFB;
+
+    .menu {
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            > li {
+                display: block;
+                float: left;
+                position: relative;
+
+                &+li {
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
 }
 
 .site-footer a {
@@ -1379,7 +1454,6 @@ body.home .site-head:after {
 .site-footer a:hover {
     color: #50585D;
 }
-
 /* The subscribe icon on the footer */
 .subscribe {
     width: 28px;
@@ -1395,7 +1469,6 @@ body.home .site-head:after {
     background: #fff;
     transition: box-shadow 0.5s;
 }
-
 /* The RSS icon, inserted via icon font */
 .subscribe:before {
     color: #D2DEE3;
@@ -1406,7 +1479,6 @@ body.home .site-head:after {
     font-weight: bold;
     transition: color 0.5s ease;
 }
-
 /* Add a box shadow to on hover */
 .subscribe:hover {
     box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
@@ -1416,13 +1488,12 @@ body.home .site-head:after {
 .subscribe:hover:before {
     color: #50585D;
 }
-
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip {
-    opacity:0;
+    opacity: 0;
     display: inline-block;
-    padding: 4px 8px 5px 8px;
-    position:absolute;
+    padding: 4px 8px 5px;
+    position: absolute;
     top: -23px;
     left: -21px;
     color: rgba(255,255,255,0.9);
@@ -1430,39 +1501,33 @@ body.home .site-head:after {
     line-height: 1em;
     text-align: center;
     background: #50585D;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease, top 0.3s ease;
 }
-
 /* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
+    content: "";
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
     border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
-    margin-left:-5px;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -5px;
     z-index: 220;
-    width:0;
+    width: 0;
 }
-
 /* On hover, show the tooltip! */
 .subscribe:hover .tooltip {
     opacity: 1;
     top: -33px;
 }
-
-
 /* ==========================================================================
    9. Media Queries - Smaller than 900px
    ========================================================================== */
-
 @media only screen and (max-width: 900px) {
-
     blockquote {
         margin-left: 0;
     }
@@ -1475,6 +1540,7 @@ body.home .site-head:after {
         min-height: 240px;
         padding: 15% 0;
     }
+
     .blog-title {
         font-size: 4rem;
         letter-spacing: -1px;
@@ -1522,16 +1588,11 @@ body.home .site-head:after {
     h4 {
         font-size: 2.8rem;
     }
-
 }
-
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
    ========================================================================== */
-
-
 @media only screen and (max-width: 500px) {
-
     .blog-logo img {
         max-height: 80px;
     }
@@ -1544,7 +1605,7 @@ body.home .site-head:after {
     }
 
     .post {
-        width:auto;
+        width: auto;
         margin-left: 16px;
         margin-right: 16px;
         font-size: 0.8em;
@@ -1563,7 +1624,7 @@ body.home .site-head:after {
         font-size: 1.5rem;
     }
 
-    .main-navigation ul li.menu-item-has-children:hover ~ li{
+    .main-navigation ul li.menu-item-has-children:hover ~ li {
         opacity: 0;
     }
 
@@ -1572,8 +1633,8 @@ body.home .site-head:after {
         left: 0;
     }
 
-
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 3rem;
         line-height: 1.1em;
         letter-spacing: -1px;
@@ -1605,8 +1666,8 @@ body.home .site-head:after {
     }
 
     .post-footer .author {
-        margin: 0 0 2rem 0;
-        padding: 0 0 1.6rem 0;
+        margin: 0 0 2rem;
+        padding: 0 0 1.6rem;
         border-bottom: #EBF2F6 1px dashed;
     }
 
@@ -1616,11 +1677,11 @@ body.home .site-head:after {
     }
 
     .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
+        margin: 1.4rem 0.8rem 0;
     }
 
-    .older-posts,
-    .newer-posts {
+    .newer-posts,
+    .older-posts {
         position: static;
         margin: 10px 0;
     }
@@ -1633,9 +1694,7 @@ body.home .site-head:after {
         margin-top: 6rem;
         font-size: 1.1rem;
     }
-
 }
-
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
