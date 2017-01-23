@@ -4077,19 +4077,19 @@ body.home .site-head:after {
     color: #50585d;
 }
 
-.site-footer ul {
+.site-footer .menu>ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.site-footer ul>li {
+.site-footer .menu>ul>li {
     display: block;
     float: left;
     position: relative;
 }
 
-.site-footer ul>li+li {
+.site-footer .menu>ul>li+li {
     margin-left: 2px;
 }
 
