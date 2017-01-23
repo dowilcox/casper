@@ -4996,7 +4996,6 @@ body.home .site-head:after
                 box-sizing: border-box;
         height: auto;
         min-height: 240px;
-        padding: 15% 0;
     }
     .blog-title
     {
@@ -5074,10 +5073,6 @@ body.home .site-head:after
         width: auto;
         margin-right: 16px;
         margin-left: 16px;
-    }
-    .site-head
-    {
-        padding: 10% 0;
     }
     .blog-title
     {
